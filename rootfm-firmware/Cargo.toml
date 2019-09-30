@@ -10,13 +10,17 @@ cortex-m = "0"
 cortex-m-rt = "0"
 cortex-m-semihosting = "0"
 panic-itm = "0"
-libm = "*"
+libm = "0.1"
 rootfm-core = { path = "../rootfm-core" }
 stm32h7xx-hal = { git = "https://github.com/stm32-rs/stm32h7xx-hal.git", features = ["stm32h743", "rt"] }
 embedded-hal = "*"
 embedded-graphics = "0.6.0-alpha.2"
 ssd1306 = "0.3.0-alpha.1"
-numtoa = "*"
+numtoa = "0.2"
 shared-bus = { version = "*", features = ["cortexm"] }
-xca9548a = "*"
+xca9548a = "0.1"
+
+[profile.release]
+lto = true
+opt-level = 'z'
 

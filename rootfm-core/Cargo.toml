@@ -10,4 +10,4 @@ hound = "*"
 cpal = "0.10"
 
 [dependencies.libm]
-version = "*"
+version = "0.1"
