@@ -6,8 +6,6 @@ pub const OPERATOR_03: u8 = 1 << 02;
 pub const OPERATOR_04: u8 = 1 << 03;
 pub const OPERATOR_05: u8 = 1 << 04;
 pub const OPERATOR_06: u8 = 1 << 05;
-pub const OPERATOR_07: u8 = 1 << 06;
-pub const OPERATOR_08: u8 = 1 << 07;
 pub const NONE: u8 = 0;
 
 pub const ALGORITHM_1: Algorithm = Algorithm {

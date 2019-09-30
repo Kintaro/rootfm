@@ -1,6 +1,6 @@
 use crate::{
     Algorithm, EnvelopeSettings, OperatorSettings, OscillatorSettings, OscillatorType, Ratio,
-    ALGORITHM_1, ALGORITHM_2, ALGORITHM_3, ALGORITHM_4, NUM_OPERATORS, SINE_OSCILLATOR,
+    ALGORITHM_1, ALGORITHM_2, ALGORITHM_3, ALGORITHM_4, NUM_OPERATORS,
 };
 
 #[derive(Copy, Clone, Debug)]
@@ -28,11 +28,7 @@ impl Preset {
     }
 }
 
-pub const DEFAULT_ENVELOPE: EnvelopeSettings = EnvelopeSettings::new(0.0, 0.01, 0.0, 0.5, 0.1, 1.0);
-pub const SLOW_RELEASE: EnvelopeSettings = EnvelopeSettings::new(0.0, 0.01, 0.0, 0.5, 0.1, 1.0);
-pub const SHORT_RELEASE: EnvelopeSettings = EnvelopeSettings::new(0.0, 0.01, 0.0, 0.5, 0.1, 0.1);
 pub const ENVELOPE_1: EnvelopeSettings = EnvelopeSettings::new(0.0, 0.01, 0.2, 0.1, 1.0, 1.0);
-//pub const ENVELOPE_1: EnvelopeSettings = EnvelopeSettings::new(0.0, 0.01, 0.0, 1.0, 1.0, 1.0);
 pub const ENVELOPE_2: EnvelopeSettings = EnvelopeSettings::new(0.0, 0.01, 0.0, 0.5, 0.0, 1.0);
 pub const ENVELOPE_3: EnvelopeSettings = EnvelopeSettings::new(0.0, 0.01, 0.0, 0.3, 0.0, 1.0);
 

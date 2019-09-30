@@ -19,7 +19,6 @@ fn number_samples_from_ms(delay: f32) -> f32 {
 impl DelayLine {
     pub fn new(delay: f32) -> DelayLine {
         let samples = delay as f32 * 0.001 * SAMPLE_RATE;
-        let delay_whole = floorf(samples);
         let fraction = floorf(number_samples_from_ms(delay) - samples);
         DelayLine {
             buffer: [0.0; MAX_BUFFER_SIZE],
@@ -31,6 +30,7 @@ impl DelayLine {
         }
     }
 
+    #[allow(unused)]
     pub fn set_delay(&mut self, delay: f32) {
         let delay_samples = number_samples_from_ms(delay);
         self.delay_samples = floorf(delay_samples);

@@ -1,6 +1,7 @@
+#![deny(warnings)]
+#![deny(unsafe_code)]
 #![no_std]
 #![feature(const_fn)]
-#![feature(const_generics)]
 
 mod algorithm;
 mod envelope;

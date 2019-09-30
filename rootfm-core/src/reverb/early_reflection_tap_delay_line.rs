@@ -36,7 +36,6 @@ impl EarlyReflectionTapDelayLine {
     fn set_delay(&mut self, delay: f32) {
         let delay_samples = SAMPLE_RATE * delay;
         self.delay_samples = floorf(delay_samples);
-        let fraction = delay_samples - self.delay_samples;
         self.read_position = if self.write_position < self.delay_samples as usize {
             self.write_position + MAX_BUFFER_SIZE - self.delay_samples as usize
         } else {

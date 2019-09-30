@@ -1,5 +1,5 @@
 use crate::{PERIOD, SAMPLE_RATE};
-use libm::{fabsf, floorf, sinf};
+use libm::{fabsf, floorf};
 
 pub const SINE_OSCILLATOR: OscillatorSettings = OscillatorSettings {
     oscillator_type: OscillatorType::Sine,
@@ -61,11 +61,11 @@ const THREE_HALF_PI: f32 = 4.7123889;
 const INV_TWO_PI: f32 = 0.1591549;
 
 fn cos_32s(x: f32) -> f32 {
-    const c1: f32 = 0.99940307;
-    const c2: f32 = -0.49558072;
-    const c3: f32 = 0.03679168;
+    const C1: f32 = 0.99940307;
+    const C2: f32 = -0.49558072;
+    const C3: f32 = 0.03679168;
     let x2 = x * x;
-    c1 + x2 * (c2 + c3 * x2)
+    C1 + x2 * (C2 + C3 * x2)
 }
 
 fn cos(mut angle: f32) -> f32 {

@@ -31,8 +31,6 @@ impl Voice {
     }
 
     pub fn compute(&mut self, preset: &Preset) -> f32 {
-        let mut values = [0.0; NUM_OPERATORS];
-
         self.operators
             .iter_mut()
             .enumerate()

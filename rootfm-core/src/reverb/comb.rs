@@ -17,6 +17,7 @@ impl Comb {
         }
     }
 
+    #[allow(unused)]
     pub fn gain(&self) -> f32 {
         self.gain
     }

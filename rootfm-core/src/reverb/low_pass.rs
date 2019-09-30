@@ -18,10 +18,12 @@ impl LowPass {
         }
     }
 
+    #[allow(unused)]
     pub fn cutoff(&self) -> f32 {
         self.cutoff
     }
 
+    #[allow(unused)]
     pub fn set_cutoff(&mut self, cutoff: f32) {
         self.cutoff = cutoff;
         let costh = 2.0 - cosf(2.0 * core::f32::consts::PI * cutoff / SAMPLE_RATE);
